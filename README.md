@@ -18,7 +18,7 @@ default settings for HLS live streaming. Built on Alpine Linux.
 
 * Build and run container from source:
 ```
-docker run --rm --privileged -it -e AWS_ACCESS_KEY_ID=xxxxxxxxxxxxxxxxxxxx -e AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -e AWS_S3_BUCKET_NAME=volatileoptions-streaming -p 1935:1935 -p 8080:80 efriandika/streaming-server
+docker run --rm --privileged -it -e AWS_ACCESS_KEY_ID=xxxxxxxxxxxxxxxxxxxx -e AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -e AWS_S3_BUCKET_NAME=volatileoptions-streaming -e AWS_S3_REGION=us-east-2 -p 1935:1935 -p 8080:80 efriandika/streaming-server
 ```
 
 * Stream live content to:

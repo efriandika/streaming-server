@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# RUN NGINX
-nginx
-
 # Entry point to mount s3fs filesystem before exec'ing command.
 
 # Fail on all script errors
@@ -42,11 +39,10 @@ if [ ! -f "${AWS_S3_AUTHFILE}" ]; then
 fi
 
 echo "==> Mounting S3 Filesystem ${AWS_S3_MOUNTPOINT}"
-## mkdir -p ${AWS_S3_MOUNTPOINT}
+# mkdir -p ${AWS_S3_MOUNTPOINT}
 
 # s3fs mount command
 s3fs $S3FS_DEBUG $S3FS_ARGS -o passwd_file=${AWS_S3_AUTHFILE} -o url=${AWS_S3_URL} -o endpoint=${AWS_S3_REGION} ${AWS_S3_BUCKET_NAME} ${AWS_S3_MOUNTPOINT}
 
-echo "Running command $@"
-
-exec "$@"
+# RUN NGINX
+nginx
