@@ -46,6 +46,4 @@ s3fs $S3FS_DEBUG $S3FS_ARGS -o passwd_file=${AWS_S3_AUTHFILE} -o url=${AWS_S3_UR
 ## s3fs -o passwd_file=/root/.s3fs -o endpoint=us-east-2 volatileoptions-streaming /opt/data
 
 # RUN NGINX
-# nginx
-
-bash
+nginx
