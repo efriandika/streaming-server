@@ -7,18 +7,17 @@ default settings for HLS live streaming. Built on Alpine Linux.
 * ffmpeg 4.2.1 (compiled from source)
 * Default HLS settings (See: [nginx.conf](nginx.conf))
 
-[![Docker Stars](https://img.shields.io/docker/stars/alfg/nginx-rtmp.svg)](https://hub.docker.com/r/alfg/nginx-rtmp/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/alfg/nginx-rtmp.svg)](https://hub.docker.com/r/alfg/nginx-rtmp/)
-[![Docker Automated build](https://img.shields.io/docker/automated/alfg/nginx-rtmp.svg)](https://hub.docker.com/r/alfg/nginx-rtmp/builds/)
-[![Build Status](https://travis-ci.org/alfg/docker-nginx-rtmp.svg?branch=master)](https://travis-ci.org/alfg/docker-nginx-rtmp)
+[![Docker Stars](https://img.shields.io/docker/stars/efriandika/streaming-server.svg)](https://hub.docker.com/r/efriandika/streaming-server/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/efriandika/streaming-server.svg)](https://hub.docker.com/r/efriandika/streaming-server/)
+[![Docker Automated build](https://img.shields.io/docker/automated/efriandika/streaming-server.svg)](https://hub.docker.com/r/efriandika/streaming-server/builds/)
 
 ## Usage
 
 ### Server
 
-* Build and run container from source:
+* Run container from source:
 ```
-docker run --rm --privileged -it -e AWS_ACCESS_KEY_ID=xxxxxxxxxxxxxxxxxxxx -e AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -e AWS_S3_BUCKET_NAME=volatileoptions-streaming -e AWS_S3_REGION=us-east-2 -p 1935:1935 -p 8080:80 efriandika/streaming-server
+docker run --rm --privileged -it -e AWS_ACCESS_KEY_ID=xxxxxxxxxxxxxxxxxxxx -e AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -e AWS_S3_BUCKET_NAME=xxxx-yyyy-zzzz -e AWS_S3_REGION=us-east-1 -p 1935:1935 -p 8080:80 efriandika/streaming-server
 ```
 
 * Stream live content to:
