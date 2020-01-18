@@ -26,7 +26,25 @@ docker run --rm --privileged -it -e AWS_ACCESS_KEY_ID=xxxxxxxxxxxxxxxxxxxx -e AW
 rtmp://<server ip>:1935/stream/$STREAM_NAME
 ```
 
-### SSL
+### OBS Configuration
+* Stream Type: `Custom Streaming Server`
+* URL: `rtmp://localhost:1935/stream`
+* Example Stream Key: `hello`
+
+## Using AWS and CloudFront
+
+### Watch Stream
+
+Access by using your S3 public URL.
+
+For example => `https://your-s3-bucket.s3.us-east-2.amazonaws.com/hls/hello.m3u8`
+
+or you can set your cloudfront distribution then based on your S3
+
+
+## Using your Own Server
+
+### SSL (optional)
 To enable SSL, see [nginx.conf](nginx.conf) and uncomment the lines:
 ```
 listen 443 ssl;
@@ -38,10 +56,6 @@ This will enable HTTPS using a self-signed certificate supplied in [/certs](/cer
 
 I recommend using [Certbot](https://certbot.eff.org/docs/install.html) from [Let's Encrypt](https://letsencrypt.org).
 
-### OBS Configuration
-* Stream Type: `Custom Streaming Server`
-* URL: `rtmp://localhost:1935/stream`
-* Stream Key: `hello`
 
 ### Watch Stream
 * In Safari, VLC or any HLS player, open:
@@ -51,6 +65,7 @@ http://<server ip>:8080/live/$STREAM_NAME.m3u8
 * Example Playlist: `http://localhost:8080/live/hello.m3u8`
 * [VideoJS Player](https://video-dev.github.io/hls.js/stable/demo/?src=http%3A%2F%2Flocalhost%3A8080%2Flive%2Fhello.m3u8)
 * FFplay: `ffplay -fflags nobuffer rtmp://localhost:1935/stream/hello`
+
 
 ### FFmpeg Build
 ```
