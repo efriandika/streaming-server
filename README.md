@@ -6,6 +6,7 @@ default settings for HLS live streaming. Built on Alpine Linux.
 * nginx-rtmp-module 1.2.1 (compiled from source)
 * ffmpeg 4.2.1 (compiled from source)
 * Default HLS settings (See: [nginx.conf](nginx.conf))
+* S3FS Fuse (Amazon S3 Integration)
 
 [![Docker Stars](https://img.shields.io/docker/stars/efriandika/streaming-server.svg)](https://hub.docker.com/r/efriandika/streaming-server/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/efriandika/streaming-server.svg)](https://hub.docker.com/r/efriandika/streaming-server/)
