@@ -38,7 +38,10 @@ Access by using your S3 public URL.
 
 For example => `https://your-s3-bucket.s3.us-east-2.amazonaws.com/hls/hello.m3u8`
 
-or you can set your cloudfront distribution then based on your S3
+or you can set your cloudfront (cache disabled) distribution then based on your S3
+
+>  ATTENTION:
+>  Don't forget to set public access and enable CORS in your s3 bucket
 
 
 ## Using your Own Server
