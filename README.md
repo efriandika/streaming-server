@@ -1,4 +1,4 @@
-# docker-nginx-rtmp
+# Docker + Nginx + RTMP + S3FS (AWS S3 Integration)
 A Dockerfile installing NGINX, nginx-rtmp-module and FFmpeg from source with
 default settings for HLS live streaming. Built on Alpine Linux.
 
@@ -10,6 +10,7 @@ default settings for HLS live streaming. Built on Alpine Linux.
 [![Docker Stars](https://img.shields.io/docker/stars/efriandika/streaming-server.svg)](https://hub.docker.com/r/efriandika/streaming-server/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/efriandika/streaming-server.svg)](https://hub.docker.com/r/efriandika/streaming-server/)
 [![Docker Automated build](https://img.shields.io/docker/automated/efriandika/streaming-server.svg)](https://hub.docker.com/r/efriandika/streaming-server/builds/)
+[![Circle CI](https://circleci.com/gh/efriandika/streaming-server.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/efriandika/streaming-server)
 
 ## Usage
 
@@ -119,3 +120,4 @@ ffmpeg version 4.2.1 Copyright (c) 2000-2019 the FFmpeg developers
 * https://github.com/arut/nginx-rtmp-module
 * https://www.ffmpeg.org
 * https://obsproject.com
+* https://github.com/s3fs-fuse/s3fs-fuse
